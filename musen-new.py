@@ -26,7 +26,7 @@ if len(df1) > 0:
 
     text = "\n".join(cities)
 
-    twit = f"{df1.columns[0]}\n\n楽天モバイル エリア更新\n\n{text}\n\nhttps://docs.google.com/spreadsheets/d/e/2PACX-1vRDgDbpuBUvGcK7TJKiwMSIfs5yi95qmERjZ_iXHMWSRDlarjwUoDVdvpXOB8a2zpnwpq4Vj9VBHJcf/pubhtml\n\n#楽天モバイル #愛媛 #基地局"
+    twit = f"{df1.columns[0]}\n\n楽天モバイル エリア更新\n\n{text}\n\nhttps://docs.google.com/spreadsheets/d/e/2PACX-1vRE1NoYtNw1FmjRQ8wcdPkcE0Ryeoc2mfFkCQPHjzwL5CpwNKkLXnBl_F7c0LZjrtbLtRLH55ZVi6gQ/pubhtml\n\n#楽天モバイル #愛媛 #基地局"
 
     print(twit)
 
