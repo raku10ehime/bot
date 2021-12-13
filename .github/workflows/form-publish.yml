@@ -18,7 +18,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install tweepy; fi
+        pip install -r form-notice_requirements.txt
     - name: Run script
       run: |
         python form-notice.py
