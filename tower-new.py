@@ -48,14 +48,25 @@ if se.sum():
 
     print(twit)
 
+    geo_df = gpd.GeoDataFrame(df3, geometry=gpd.points_from_xy(df3.lng, df3.lat), crs=6668)
+    ehime = gpd.read_file("N03-20210101_38_GML.zip!N03-20210101_38_GML")
+
+    base = ehime.plot(color="white", edgecolor="black")
+    ax = geo_df.plot(ax=base, marker="o", color="red", markersize=5)
+    ax.set_axis_off()
+    
+    plt.savefig("map.png", dpi=200)
+    
     consumer_key = os.environ["CONSUMER_KEY"]
     consumer_secret = os.environ["CONSUMER_SECRET"]
     access_token = os.environ["ACCESS_TOKEN"]
     access_token_secret = os.environ["ACCESS_TOKEN_SECRET"]
     bearer_token = os.environ["BEARER_TOKEN"]
 
-    client = tweepy.Client(
-        bearer_token, consumer_key, consumer_secret, access_token, access_token_secret
-    )
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+
+    api = tweepy.API(auth)
     
-    client.create_tweet(text=twit)
+    media_id = api.media_upload("map.png").media_id
+    api.update_status(status=twit, media_ids=[media_id])
