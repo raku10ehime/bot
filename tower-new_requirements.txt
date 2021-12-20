@@ -1,2 +1,5 @@
 pandas
 tweepy
+geopandas
+rtree
+pygeos
