@@ -49,6 +49,8 @@ if se.sum():
     twit += f"\n{url}"
 
     print(twit)
+    
+    df3 = df0[df0["date"] == se.name].copy().sort_values(["enb", "lcid"])
 
     geo_df = gpd.GeoDataFrame(df3, geometry=gpd.points_from_xy(df3.lng, df3.lat), crs=6668)
     ehime = gpd.read_file("N03-20210101_38_GML.zip!N03-20210101_38_GML")
