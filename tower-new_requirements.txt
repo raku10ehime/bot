@@ -3,3 +3,4 @@ tweepy
 geopandas
 rtree
 pygeos
+matplotlib
