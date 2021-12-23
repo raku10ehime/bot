@@ -4,3 +4,4 @@ geopandas
 rtree
 pygeos
 matplotlib
+japanize-matplotlib
