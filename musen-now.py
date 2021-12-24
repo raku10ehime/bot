@@ -87,6 +87,6 @@ api = tweepy.API(auth)
 
 image_id = api.media_upload("ehime.png").media_id
 
-twit = f'{update}現在 市町村別包括免許'
+twit = f'{update}現在\n\n市町村別包括免許'
 
 api.update_status(status=twit, media_ids=[image_id])
