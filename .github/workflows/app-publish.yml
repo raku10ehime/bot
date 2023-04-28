@@ -1,4 +1,4 @@
-name: App Notice
+name: App Notify
 
 on:
   repository_dispatch:
