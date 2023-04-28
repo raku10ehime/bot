@@ -1,7 +1,0 @@
-pandas
-tweepy
-geopandas
-rtree
-pygeos
-matplotlib
-japanize-matplotlib
