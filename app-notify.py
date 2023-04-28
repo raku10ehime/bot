@@ -57,6 +57,8 @@ def status_check(x):
 df2["内容"] = df2.apply(status_check, axis=1)
 df2["備考"].mask(df2["備考"].isna(), df2["内容"], inplace=True)
 
+df3 = df2[df2["投稿者"] != "@imabarizine"].copy()
+
 
 # Twitter投稿
 
@@ -70,7 +72,7 @@ client = tweepy.Client(
     bearer_token, consumer_key, consumer_secret, access_token, access_token_secret
 )
 
-for i, row in df2.iterrows():
+for i, row in df3.iterrows():
 
     latlng = row["地図"].replace(" ", "")
 
