@@ -24,7 +24,7 @@ jobs:
         pip install -r app-notify_requirements.txt
     - name: Run script
       run: |
-        python app-notice.py
+        python app-notify.py
       env:
         CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
         CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
