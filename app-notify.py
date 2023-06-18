@@ -76,7 +76,7 @@ for i, row in df3.iterrows():
 
     latlng = row["地図"].replace(" ", "")
 
-    twit = f'{row["備考"]}\n\n【日付】\n{row["日付"]}\n\n【場所】\n{row["場所"]}'
+    twit = f'{row["投稿者"]}\n\n{row["備考"]}\n\n【日付】\n{row["日付"]}\n\n【場所】\n{row["場所"]}'
 
     if row["eNB-LCID"]:
         twit += f'\n\n【基地局】\n・eNB-LCID: {row["eNB-LCID"]}\n・PCI: {row["PCI"]}'
